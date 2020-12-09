@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="./files/style.css">
+  <meta name="description" content="What food can your dog eat? In this website you can check it easily!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Can my dog eat this?</title>
+</head>
+
+<body style="background-color: #011627;">
+  <div class="app">
+    <h1 style="color: #70c1b3;">What foods can my dog eat?</h1>
+    <p class="link" style="color: #1d8d7a;">This app tells you what leftover foods dogs can and can't eat.</p>
+    <input required class="label" type="text" id="answer" placeholder="Type a food here. 🥘🍎🍖" style="color: #009476">
+    <div class="buttons">
+      <input class="submitbutton" type="button" value="Check food" id="submit" onclick="foodChecker()" style="background-color: #1d8d7a;">
+    </div>
+    <div id="result"></div>
+    <div id="description"></div>
+  </div>
+  <script src="./files/main.js"></script>
+</body>
+
+</html>
