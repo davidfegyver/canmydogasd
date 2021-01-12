@@ -2,11 +2,169 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="./files/style.css">
+
   <meta name="description" content="What food can your dog eat? In this website you can check it easily!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="mobile-web-app-capable" content="yes">
   <title>Can my dog eat this?</title>
+<script>
+ //Elements
+ const input = document.getElementById("answer");
+ const result = document.getElementById("result");
+ const description = document.getElementById("description");
+
+ input.addEventListener("keyup", function () {
+   event.preventDefault();
+   if (event.keyCode === 13) document.getElementById("submit").click();
+ });
+
+ var goodFood = {
+   apple: "The seeds are toxic and core is a choking hazard, so be careful.",
+   apricot: "Remove the core (choking hazard and toxic), and don't give too much as it contains small amounts of cyanide.",
+   banana: "",
+   ananas: "",
+   blueberr: "",
+   cantaloupe: "Remove the seeds and skin.",
+   cranberr: "",
+   mango: "Healthy for dogs, but make sure its without the peel and pit (skin is hard to digest, pit is choking hazard).",
+   orange: "High in sugar and can cause upset stomach.",
+   pear: "The seeds are toxic and core is a choking hazard, so only give your dog bit-size slices of pear.",
+   pineapple: "Can cause nausea and diarrhea in larger amount.",
+   strawberr: "",
+   watermelon: "Without the rind or seeds, which can be choking hazard and cause digestive problems.",
+   corn: "Never give your dog the corn cob!",
+   broccoli: "Dogs can eat raw or cooked broccoli. Too much can cause digestive problems.",
+   cauliflower: "",
+   cabbage: "",
+   asparagus: "On some occasions may cause vomiting or diarrhea if uncooked.",
+   pepper: "",
+   "brussels sprouts": "",
+   carrot: "",
+   celer: "Cut it into bite-size pieces to avoid choking hazard.",
+   cucumber: "",
+   lettuce: "",
+   pea: "Only fresh / frozen peas. Avoid canned peas as they are usually heavily salted.",
+   pumpkin: "",
+   zucchini: "",
+   potato: "But raw potatoes contain solanine which is toxic to dogs!",
+   blackberr: "",
+   kiwi: "Remove the skin if you can (because it can cause digestive problems) and not give kiwi as a whole so the dog wont swallow it and choke / create blockage.",
+   plum: "The pit is toxic and there is choking hazard, so only give your dog bit-size slices of plum.",
+   tangerine: "Not toxic but high in sugar and can cause upset stomach.",
+   nectarine: "Not toxic but high in sugar and can cause upset stomach.",
+   egg: "But raw eggs could give your dog salmonella, and too much of it can cause biotin deficiency.",
+   popcorn: "OK for dogs, but make sure doesn't have salt or too much oil in it.",
+   bread: "Contains lots of salt and sugar, so it is not healthy.",
+   oatmeal: "",
+   chicken: "Avoid seasonings or sauces. Raw Chicken can give your dog salmonella and may contain other unhealthy bacteria.",
+   pork: "Not including ham and bacon which are bad. Also avoid seasonings or sauces. Raw Pork can give your dog salmonella and may contain other unhealthy bacteria.",
+   beef: "Avoid too spicy ones and also those with onion or garlic flavour.",
+   turkey: "Avoid seasoning or sauces, and only boneless and skinless turkey.",
+   rice: "Brown rice is better for dogs since white rice is highly processed. Brown rice has more vitamins
+
+</script>
+<style>
+body {
+  background-color: #011627;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: #70c1b3;
+  line-height: 27px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Tahoma;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+}
+
+h3 {
+  font-weight: lighter;
+}
+
+.link {
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  color: #1d8d7a;
+  margin-bottom: 10%;
+}
+
+.label {
+  background: 0 0;
+  border: none;
+  border-bottom: 1px solid;
+  width: 100%;
+  outline: 0;
+  padding: 0;
+  color: #1d8d7a;
+  opacity: 0.7;
+  padding-bottom: 5px;
+  font-size: 350%;
+  font-weight: lighter;
+}
+
+
+::placeholder {
+  color: #1d8d7a;
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: 10%;
+}
+
+.buttons {
+  display: inline;
+}
+
+.submitbutton {
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  padding: 17px 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: 0;
+  background: #1abc9c;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  display: inline;
+}
+
+input {
+  font-size: 25px;
+  text-align: left;
+  font-style: normal;
+}
+
+#result {
+  font-size: 30px;
+  color: #faebd7;
+  opacity: 0.8;
+  font-style: normal;
+  font-weight: lighter;
+  font-family: sans-serif;
+}
+
+#description {
+  font-size: 30px;
+  color: #faebd7;
+  opacity: 0.8;
+  font-style: normal;
+  font-weight: lighter;
+  font-family: sans-serif;
+  padding-top: 5%;
+  line-height: 32px;
+  text-align: justify;
+}
+</style>
 </head>
 
 <body style="background-color: #011627;">
